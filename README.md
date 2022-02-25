@@ -1,10 +1,12 @@
 [![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
-[![Build Status](https://travis-ci.org/doesntmattr/mongodb-migrations-bundle.svg?branch=master)](https://travis-ci.org/doesntmattr/mongodb-migrations-bundle)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/doesntmattr/mongodb-migrations-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/doesntmattr/mongodb-migrations-bundle/?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/doesntmattr/mongodb-migrations-bundle/v/stable)](https://packagist.org/packages/doesntmattr/mongodb-migrations-bundle)
-[![Total Downloads](https://poser.pugx.org/doesntmattr/mongodb-migrations-bundle/downloads)](https://packagist.org/packages/doesntmattr/mongodb-migrations-bundle)
+[![Build Status](https://travis-ci.org/devture/mongodb-migrations-bundle.svg?branch=master)](https://travis-ci.org/devture/mongodb-migrations-bundle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/devture/mongodb-migrations-bundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/devture/mongodb-migrations-bundle/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/devture/mongodb-migrations-bundle/v/stable)](https://packagist.org/packages/devture/mongodb-migrations-bundle)
+[![Total Downloads](https://poser.pugx.org/devture/mongodb-migrations-bundle/downloads)](https://packagist.org/packages/devture/mongodb-migrations-bundle)
 
 # MongoDB Migrations Bundle
+
+**2022-02-05**: This is a fork of the `antimattr/mongodb-migrations-bundle` library, which makes it work on PHP 8 and Symfony 6.
 
 This bundle integrates the [MongoDB Migrations](https://github.com/doesntmattr/mongodb-migrations) library into Symfony to get you set up more quickly.
 
@@ -21,11 +23,7 @@ If you require php 5.6 support use version `^1.0`. Version `^3.0` requires at le
 Install with composer:
 
 ```bash
-# For php 5.6
-composer require "doesntmattr/mongodb-migrations-bundle=^1.0"
-
-# For php 7.1
-composer require "doesntmattr/mongodb-migrations-bundle=^3.0"
+composer require "doesntmattr/mongodb-migrations-bundle=^4.0"
 ```
 
 then enable the bundle in `AppKernel.php` by including the following:
@@ -92,7 +90,7 @@ class Version20130326212938 extends AbstractMigration implements ContainerAwareI
 ## MongoDB Cursor Timeouts
 
 
-In some cases you may need the Cursor timeout to be extended. If so, add the MongoDB option `['socketTimeoutMs' => -1]` to your update method. 
+In some cases you may need the Cursor timeout to be extended. If so, add the MongoDB option `['socketTimeoutMs' => -1]` to your update method.
 
 
 ## Features
@@ -141,9 +139,9 @@ This is what you will execute during your deployment process.
 
 ```bash
 ./console mongodb:migrations:migrate
-                                                                    
-                    AntiMattr Example Migrations                    
-                                                                    
+
+                    AntiMattr Example Migrations
+
 
 WARNING! You are about to execute a database migration that could result in data lost. Are you sure you wish to continue? (y/n)y
 Migrating up to 20140822185744 from 0
@@ -153,17 +151,17 @@ Migrating up to 20140822185744 from 0
 
      Collection test_a
 
-     metric           before               after                difference           
+     metric           before               after                difference
      ================================================================================
-     count            100                  100                  0                   
-     size             20452                20452                0                   
-     avgObjSize       204.52               204.52               0                   
-     storageSize      61440                61440                0                   
-     numExtents       2                    2                    0                   
-     nindexes         1                    2                    1                   
-     lastExtentSize   49152                49152                0                   
-     paddingFactor    1                    1                    0                   
-     totalIndexSize   8176                 16352                8176                
+     count            100                  100                  0
+     size             20452                20452                0
+     avgObjSize       204.52               204.52               0
+     storageSize      61440                61440                0
+     numExtents       2                    2                    0
+     nindexes         1                    2                    1
+     lastExtentSize   49152                49152                0
+     paddingFactor    1                    1                    0
+     totalIndexSize   8176                 16352                8176
 
   ++ migrated (0.03s)
 
@@ -194,17 +192,17 @@ WARNING! You are about to execute a database migration that could result in data
 
      Collection test_a
 
-     metric           before               after                difference           
+     metric           before               after                difference
      ================================================================================
-     count            100                  100                  0                   
-     size             20620                20620                0                   
-     avgObjSize       206.2                206.2                0                   
-     storageSize      61440                61440                0                   
-     numExtents       2                    2                    0                   
-     nindexes         1                    2                    1                   
-     lastExtentSize   49152                49152                0                   
-     paddingFactor    1                    1                    0                   
-     totalIndexSize   8176                 16352                8176                
+     count            100                  100                  0
+     size             20620                20620                0
+     avgObjSize       206.2                206.2                0
+     storageSize      61440                61440                0
+     numExtents       2                    2                    0
+     nindexes         1                    2                    1
+     lastExtentSize   49152                49152                0
+     paddingFactor    1                    1                    0
+     totalIndexSize   8176                 16352                8176
 
   ++ migrated (0.02s)
 ```
