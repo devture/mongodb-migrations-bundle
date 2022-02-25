@@ -44,7 +44,7 @@ class MongoDBMigrationsExtension extends Extension
     /**
      * {@inheritdoc}
      */
-    public function getAlias()
+    public function getAlias(): string
     {
         return 'mongo_db_migrations';
     }
