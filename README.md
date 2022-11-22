@@ -23,7 +23,7 @@ If you require php 5.6 support use version `^1.0`. Version `^3.0` requires at le
 Install with composer:
 
 ```bash
-composer require "doesntmattr/mongodb-migrations-bundle=^4.0"
+composer require "devture/mongodb-migrations-bundle=^4.0"
 ```
 
 then enable the bundle in `AppKernel.php` by including the following:
