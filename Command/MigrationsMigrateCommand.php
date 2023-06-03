@@ -22,7 +22,7 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class MigrationsMigrateCommand extends MigrateCommand
 {
-    protected function configure()
+    protected function configure(): void
     {
         parent::configure();
 
